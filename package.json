@@ -1,7 +1,7 @@
 {
   "name": "FreeTimeLance",
   "productName": "FreeTimeLance",
-  "version": "0.0.",
+  "version": "0.0.1",
   "description": "Electron application for help freenlancer to bills client. Help too setup project timer.",
   "main": "main.js",
   "scripts": {

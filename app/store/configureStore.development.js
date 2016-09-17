@@ -19,8 +19,14 @@ const logger = createLogger({
 
 const router = routerMiddleware(hashHistory);
 
+const middleware = [
+  thunk,
+  router,
+  logger
+];
+
 const enhancer = compose(
-  applyMiddleware(thunk, router, logger),
+  applyMiddleware(...middleware),
   window.devToolsExtension ?
     window.devToolsExtension({ actionCreators }) :
     noop => noop
