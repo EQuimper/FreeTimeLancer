@@ -98,6 +98,7 @@
   "dependencies": {
     "css-modules-require-hook": "^4.0.2",
     "electron-debug": "^1.0.1",
+    "flexboxgrid": "^6.3.1",
     "font-awesome": "^4.6.3",
     "material-ui": "^0.15.4",
     "postcss": "^5.1.2",

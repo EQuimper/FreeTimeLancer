@@ -1,25 +1,19 @@
 import React, { PropTypes } from 'react';
 import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
 
-const styles = {
-  root: {
-    width: 250
-  }
-};
+import { ListProjectsSidebar } from '../../components/ListProjectsSidebar';
 
 export const SideBar = ({ sidebarState, sidebarActions }) =>
   <Drawer
+    // width={200}
     open={sidebarState}
-    style={styles.root}
     docked={false}
     onRequestChange={() => sidebarActions.toggleSidebarAction()}
   >
-    <MenuItem>Menu Item</MenuItem>
-    <MenuItem>Menu Item 2</MenuItem>
+    <ListProjectsSidebar />
   </Drawer>;
 
 SideBar.propTypes = {
   sidebarState: PropTypes.bool,
-  sidebarActions: PropTypes.func
+  sidebarActions: PropTypes.object
 };
