@@ -10,7 +10,7 @@ import css from './RightSideBar.css';
 
 export const RightSideBar = () =>
   <div className={css.container}>
-    <Link>
+    <Link to="/timer/new">
       <FloatingActionButton>
         <ContentAdd />
       </FloatingActionButton>

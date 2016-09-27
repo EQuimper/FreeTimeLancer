@@ -5,7 +5,6 @@ import { ListProjectsSidebar } from '../../components/ListProjectsSidebar';
 
 export const SideBar = ({ sidebarState, sidebarActions }) =>
   <Drawer
-    // width={200}
     open={sidebarState}
     docked={false}
     onRequestChange={() => sidebarActions.toggleSidebarAction()}
