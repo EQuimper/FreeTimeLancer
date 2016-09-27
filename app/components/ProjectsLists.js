@@ -70,7 +70,6 @@ const styles = {
   }
 };
 
-
 export const ProjectsLists = () =>
   <div style={styles.root}>
     <div style={styles.container}>
