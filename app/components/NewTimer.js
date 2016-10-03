@@ -1,22 +1,38 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { reduxForm, Field } from 'redux-form';
 import Paper from 'material-ui/Paper';
-import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import { MyTextField } from './customField/MyTextField';
 import cn from './NewTimer.css';
 
-export const NewTimer = () =>
+const NewTimer = ({ handleSubmit }) =>
   <div className={cn.root}>
     <Paper zDepth={3} style={styles.paper}>
       <h1>Create a new timer</h1>
-      <TextField
-        hintText="Project Name"
-        floatingLabelText="Project Name"
-      />
-      <div className={cn.buttonContainer}>
-        <RaisedButton label="Create" primary />
-      </div>
+      <form onSubmit={handleSubmit}>
+        <Field
+          name="projectName"
+          hintText="Project Name"
+          floatingLabelText="Project Name"
+          component={MyTextField}
+        />
+        <br />
+        <Field
+          name="customerName"
+          hintText="Customer Name"
+          floatingLabelText="Customer Name"
+          component={MyTextField}
+        />
+        <div className={cn.buttonContainer}>
+          <RaisedButton label="Create" primary />
+        </div>
+      </form>
     </Paper>
   </div>;
+
+NewTimer.propTypes = {
+  handleSubmit: PropTypes.func
+};
 
 const styles = {
   paper: {
@@ -30,3 +46,7 @@ const styles = {
     flexDirection: 'column'
   }
 };
+
+export default reduxForm({
+  form: 'projectForm'
+})(NewTimer);

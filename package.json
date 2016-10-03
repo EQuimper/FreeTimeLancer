@@ -28,9 +28,9 @@
     "url": "git+https://github.com/chentsulin/electron-react-boilerplate.git"
   },
   "author": {
-    "name": "C. T. Lin",
-    "email": "chentsulin@gmail.com",
-    "url": "https://github.com/chentsulin"
+    "name": "Emanuel Quimper",
+    "email": "quimperemanuel@gmail.com",
+    "url": "https://github.com/EQuimper"
   },
   "license": "MIT",
   "bugs": {
@@ -114,6 +114,7 @@
     "react-tap-event-plugin": "^1.0.0",
     "redux": "^3.5.2",
     "redux-form": "^6.0.5",
+    "redux-form-material-ui": "^4.0.1",
     "redux-thunk": "^2.1.0",
     "source-map-support": "^0.4.2"
   },
